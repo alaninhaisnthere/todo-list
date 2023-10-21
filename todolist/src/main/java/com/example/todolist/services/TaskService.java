@@ -31,11 +31,11 @@ public class TaskService {
 
     public Task updateTask(Long id, Task task) {
         if (taskRepository.existsById(id)) {
-            task.setId(id);
             return taskRepository.save(task);
         }
         return null;
     }
+    
 
     public void deleteTask(Long id) {
         taskRepository.deleteById(id);
